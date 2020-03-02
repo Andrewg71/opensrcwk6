@@ -6,6 +6,19 @@
     <title>View Page</title>
 </head>
 <body>
+    <a href="/index">Add Employee</a>
     
+    {{#each results}} 
+    <h2>Name: {{this.firstName}} {{this.lastName}}</h2>
+        {{this.jobTitle}} of the {{this.department}} department<br>
+        Started {{this.startDate}}, Salary: ${{this.salary}}<br>
+
+        [<a href='delete/{{this._id}}'>Delete</a>]
+        [<a href='update/{{this._id}}'>Update</a>]
+
+        <hr>
+    {{/each}}
+    
+
 </body>
 </html>

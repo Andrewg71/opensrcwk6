@@ -1,0 +1,28 @@
+
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+</head>
+<body>
+    
+    <form action="/update_now" method="POST">
+        <input type="hidden" name="id" value="{{found._id}}">
+        First Name: <input type="text" name="firstName" value="{{found.firstName}}"> </br>       
+        Last Name: <input type="text" name="lastName" value="{{found.lastName}}"> </br>
+        Department: <select name="department">
+            <option value="Engineering">Engineering</option>
+            <option value="Finance">Finance</option>
+            <option value="Marketing">Marketing</option>
+        </select> </br>
+        Start Date: <input type="Date" name="startDate" value="{{found.startDate}}"> </br>
+        Job Title: <input type="text" name="jobTitle" value="{{found.jobTitle}}"> </br>
+        Salary: <input type="Number" name="salary" value="{{found.salary}}"> </br>
+        <input type="submit" value="submit">
+
+    </form>
+</body>
+</html>
